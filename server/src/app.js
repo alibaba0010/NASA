@@ -8,9 +8,11 @@ const api = require("./routes/api");
 const app = express();
 
 app.use(
-  cors({
-    origin: "http://localhost:3000",
-  })
+  cors(
+    // {
+    // origin: ["http://localhost:3000", "http://192.168.244.55:3000/"],
+  // }
+  )
 );
 app.use(morgan("combined"));
 
