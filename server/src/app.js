@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+require('express-async-errors');
 const cors = require("cors");
 const morgan = require("morgan");
 
@@ -9,9 +10,9 @@ const app = express();
 
 app.use(
   cors(
-    // {
-    // origin: ["http://localhost:3000", "http://192.168.244.55:3000/"],
-  // }
+    {
+    origin: ["http://localhost:3000", "http://192.168.244.55:3000/"],
+  }
   )
 );
 app.use(morgan("combined"));

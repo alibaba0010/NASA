@@ -1,14 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-require('dotenv').config();
+require("dotenv").config();
 
 // Update below to match your own MongoDB connection string.
 const MONGO_URL = process.env.MONGO_URL;
-mongoose.connection.once('open', () => {
-  console.log('MongoDB connection ready!');
+mongoose.connection.once("open", () => {
+  console.log("MongoDB connection ready!");
 });
+mongoose.set("strictQuery", false);
 
-mongoose.connection.on('error', (err) => {
+mongoose.connection.on("error", (err) => {
   console.error(err);
 });
 
@@ -23,4 +24,4 @@ async function mongoDisconnect() {
 module.exports = {
   mongoConnect,
   mongoDisconnect,
-}
+};
