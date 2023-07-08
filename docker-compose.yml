@@ -3,9 +3,7 @@ services:
   nasa-client:
     container_name: frontend
     build: ./client
-      # context: ./client
     command: npm run start
-    # dockerfile: Dockerfile
     ports:
       - 3000:3000
     volumes:
@@ -13,23 +11,10 @@ services:
     depends_on:
       - nasa-server
   nasa-server:
-    container_name: backend
+    container_name: api
     build: ./server
-
-    # context: ./server
     command: npm run watch
-    # dockerfile: Dockerfile
     ports:
       - 8000:8000
     volumes:
       - ./server:/usr/src/test
-# services:
-#   app:
-#     build:
-#       context: .
-#       dockerfile: Dockerfile
-#     ports:
-#       - 8000:8000
-#       - 3000:3000
-#     volumes:
-#       - ./:/usr/src/test
