@@ -5,7 +5,6 @@ const API_URL = "https://alibaba-nasa-api.onrender.com/v1";
 // Load planets and return as JSON.
 async function httpGetPlanets() {
   const response = await fetch(`${API_URL}/planets`);
-  console.log("Response: ", response);
   return await response.json();
 }
 
