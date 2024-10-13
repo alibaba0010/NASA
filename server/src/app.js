@@ -14,6 +14,9 @@ app.use(
       "http://localhost:3000",
       "http://192.168.244.55:3000/",
       "http://localhost:8000",
+      "http://localhost:5000",
+      "https://3000-alibaba0010-nasa-1hyhjb9gtcw.ws-eu116.gitpod.io",
+
     ],
   })
 );
